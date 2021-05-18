@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./S2Lab.js"></script>
+    <link rel="stylesheet" href="./S2Lab.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Resful Api Todos (Hotel)</h3>
+        <button id="btn" class="btn btn-danger">Add Or Create Todos</button>
+        <button id="btnsingle" class="btn btn-danger">Display Single Todo</button>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="addmodel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="Userid">Userid</label>
+                            <input type="text" class="form-control" name="userid" id="useridadd"
+                                aria-describedby="helpId" placeholder="Userid">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" name="title" id="titleadd" aria-describedby="helpId"
+                                placeholder="Title">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="Completed">Completed</label>
+                            <input type="text" class="form-control" name="Completed" id="Completedadd"
+                                aria-describedby="helpId" placeholder="Completed">
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" id="save" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="recipes"></div>
+        <div id="single"></div>
+
+
+
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="updatemodle" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="updateId" /> <br />
+
+                    <div class="form-group">
+                        <label for="Userid">Userid</label>
+                        <input type="text" class="form-control" name="userid" id="userid" aria-describedby="helpId"
+                            placeholder="Userid">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
+                            placeholder="Title">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="Completed">Completed</label>
+                        <input type="text" class="form-control" name="Completed" id="Completed"
+                            aria-describedby="helpId" placeholder="Completed">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="UpdatedSave" class="btn btn-primary">Save</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
